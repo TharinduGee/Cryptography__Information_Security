@@ -34,9 +34,17 @@ public class Basics {
           return val;
      }
 
-     //code for eucledian
+     public static int gcd_euclidian(BigInteger a, BigInteger b) {
+          while (b.byteValue() != 0) {
+               BigInteger temp = b;
+               b = a.mod(b);
+               a = temp;
+          }
+          return Math.abs(a.byteValue());
+     }
 
      public static void main(String[] args){
-          // Driver code here
+          int result = gcd_euclidian(BigInteger.valueOf(30), BigInteger.valueOf(20));
+          System.out.println("Greatest common divisor is: " + result);
      }
 }
