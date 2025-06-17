@@ -34,6 +34,7 @@ public class Basics {
           return val;
      }
 
+     // gcd(a,b)=gcd(b,amodb)
      public static int gcd_euclidian(BigInteger a, BigInteger b) {
           while (b.byteValue() != 0) {
                BigInteger temp = b;
